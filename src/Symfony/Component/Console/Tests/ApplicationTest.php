@@ -1752,7 +1752,7 @@ class ApplicationTest extends TestCase
 
     protected function tearDown()
     {
-        putenv($this->colSize ? 'COLUMNS' : 'COLUMNS='.$this->colSize);
+        putenv($this->colSize ? 'COLUMNS='.$this->colSize : 'COLUMNS');
         putenv('SHELL_VERBOSITY');
         unset($_ENV['SHELL_VERBOSITY']);
         unset($_SERVER['SHELL_VERBOSITY']);
